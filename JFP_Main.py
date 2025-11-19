@@ -8,7 +8,7 @@ print("   ⚔️        ✂️             🎩            🎲          ")
 #importing dice game
 import Dice
 import Rockps
-
+import numguess
 
     
 CHOOSE_THE_GAME_BUTTON = int(input("WELCOME!!\n" "1 --> ROCK-PAPER-SCISSORS\n" "2 --> DICE ROLL\n" "3 --> GUESS THE NUMBER??!!\n\n" "ENTER YOUR CHOICE: " ))
@@ -29,7 +29,12 @@ elif CHOOSE_THE_GAME_BUTTON == 2:
         
 
 elif CHOOSE_THE_GAME_BUTTON == 3:
-    pass
+      game_run=True
+      while game_run:
+            numguess.numgame()
+            if not input("Play again?(y/n)").lower()=="y":
+                break
+    
 
 else:
     print("OOPS ENTERED WRONG CHOICE PLZ TRY AGAIN")
