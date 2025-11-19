@@ -1,5 +1,6 @@
 import random
 import ref
+print("RULES:","You will have 6 chances to guess the correct word","your life will be displayed by the graphic","enter space if two or more words ","case sensitive",sep="\n")
 
 life_art = {6: ("   ",
                                    "   ",
@@ -62,9 +63,9 @@ def main():
     while is_running:
         display_man(wrong_guesses)
         display_hint(hint)
-        guess = input("Enter a letter: ").lower()
+        guess = input("Enter a letter: ")
 
-        if len(guess) != 1 or not guess.isalpha():
+        if len(guess) != 1 :
             print("Invalid input")
             continue
 
@@ -79,6 +80,7 @@ def main():
                 if answer[i] == guess:
                     hint[i] = guess
         else:
+            hint[wrong_guesses]=answer[wrong_guesses]
             wrong_guesses += 1
 
         if "_" not in hint:
