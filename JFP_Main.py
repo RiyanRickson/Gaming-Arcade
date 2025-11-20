@@ -10,9 +10,13 @@ import Dice
 import Rockps
 import numguess
 import Adventure_game
+import Cric_guesser
+
+
+
 
 def main_page():   
-    print("WELCOME!!", "1 --> ROCK-PAPER-SCISSORS", "2 --> DICE ROLL" ,"3 --> GUESS THE NUMBER??!!","4 --> Adventure_game" ,"ENTER YOUR CHOICE: ",sep="\n" )
+    print("WELCOME!!", "1 --> ROCK-PAPER-SCISSORS", "2 --> DICE ROLL" ,"3 --> GUESS THE NUMBER??!!","4 --> Adventure_game" ,"5--> Guess the cricketer","ENTER YOUR CHOICE: ",sep="\n" )
     CHOOSE_THE_GAME_BUTTON=int(input())
 
     if CHOOSE_THE_GAME_BUTTON == 1:
@@ -42,6 +46,12 @@ def main_page():
             Adventure_game.adventur_game()
             if not input("Play again?(y/n): ").lower()=="y":
                 break
+    elif CHOOSE_THE_GAME_BUTTON==5:
+        game_run=True
+        while game_run:
+            Cric_guesser.cric_game()
+            if not input("Play again?(y/n): ").lower()=="y":
+                break
         
 
     else:
@@ -52,3 +62,5 @@ while main_run:
      main_page()
      if not input("Change game and play? (y/n): ").lower()=="y":
           break
+
+
