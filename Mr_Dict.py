@@ -40,20 +40,20 @@ def display_answer(answer):
     print(" ".join(answer))
 
 def main():
-    print("\nfrom what set of words would you like to guess?","1:Indian foods","2:Fruits","3:Indian states and ut","4:Cricketers" ,sep="\n")
-    gset=int(input("your choice:"))
-    match gset:
-        case 1:
-            words=ref.indian_foods
-        case 2:
-            words=ref.fruits
-        case 3:
-            words=ref.indian_states_and_ut
-        case 4:
-            words=ref.indian_cricketers
-        case _:
-            print("Invalid input")
-            exit
+    print("\nfrom what role of players would you like to guess?","1:Batsmen","2:All Rounders","3:Bowlers" ,sep="\n")
+    a=input("Choice:  ")
+    print("From which country? ","1: India","2: Australia","3: England","4: New Zealand","5: South Africa","6: West Indies",sep="\n")
+    b=input("Choice: ")
+    c=a+b
+
+    if c not in ["11","21","31","12","22","32","13","23","33","14","24","34","15","25","35","16","26","36"]:
+        print("Invalid input")
+        exit
+    else:
+        words=ref.cric[c]
+
+    
+   
     answer = random.choice(words).lower()
     hint = ["_"] * len(answer)
     for i in range(len(answer)):
