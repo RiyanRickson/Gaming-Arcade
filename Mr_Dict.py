@@ -1,37 +1,37 @@
 import random
 import ref
-print("RULES:","You will have 6 chances to guess the correct word","your life will be displayed by the graphic","enter space if two or more words ","case sensitive",sep="\n")
+print("\nRULES:\n","You will have 6 chances to guess the correct word","your life will be displayed by the graphic","enter space if two or more words ","case sensitive",sep="\n")
 
 life_art = {6: ("   ",
                                    "   ",
                                    "   "),
-                             5: (" o ",
+                             5: (" 👽 ",
                                    "   ",
                                    "   "),
-                             4: (" o ",
+                             4: (" 👽 ",
                                    " | ",
                                    "   "),
-                             3: (" o ",
+                             3: (" 👽 ",
                                    "/| ",
                                    "   "),
-                             2: (" o ",
+                             2: (" 👽 ",
                                   "/|\\",
                                    "   "),
-                              1: (" o ",
+                              1: (" 👽 ",
                                    "/|\\",
                                    "/  "),
-                              0: (" o ",
+                              0: (" 👽 ",
                                    "/|\\",
                                    "/ \\")}
 
 
 
 def display_man(wrong_guesses):
-    print("**********")
+    print("\n**********\n")
     print("LIFE=")
     for line in life_art[wrong_guesses]:
         print(line)
-    print("**********")
+    print("\n**********\n")
 
 def display_hint(hint):
     print(" ".join(hint))
@@ -40,7 +40,7 @@ def display_answer(answer):
     print(" ".join(answer))
 
 def main():
-    print("from what set of words would you like to guess?","1:Indian foods","2:Fruits","3:Indian states and ut","4:Cricketers" ,sep="\n")
+    print("\nfrom what set of words would you like to guess?","1:Indian foods","2:Fruits","3:Indian states and ut","4:Cricketers" ,sep="\n")
     gset=int(input("your choice:"))
     match gset:
         case 1:
@@ -54,8 +54,13 @@ def main():
         case _:
             print("Invalid input")
             exit
-    answer = random.choice(words)
+    answer = random.choice(words).lower()
     hint = ["_"] * len(answer)
+    for i in range(len(answer)):
+        if answer[i]==" ":
+            hint[i]=" "
+            
+    
     wrong_guesses = 0
     guessed_letters = set()
     is_running = True
@@ -63,9 +68,9 @@ def main():
     while is_running:
         display_man(wrong_guesses)
         display_hint(hint)
-        guess = input("Enter a letter: ")
+        guess = input("Enter a letter: ").lower()
 
-        if len(guess) != 1 :
+        if len(guess) != 1 or  not guess.isalpha():
             print("Invalid input")
             continue
 
