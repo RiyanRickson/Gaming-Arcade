@@ -11,6 +11,7 @@ import Rockps
 import numguess
 import Adventure_game
 import Cric_guesser
+import tic_tac_toe2
 
 
 
@@ -52,7 +53,12 @@ def main_page():
             Cric_guesser.cric_game()
             if not input("Play again?(y/n): ").lower()=="y":
                 break
-        
+    elif CHOOSE_THE_GAME_BUTTON==7:
+        game_run=True
+        while game_run:
+            tic_tac_toe2.tic_game()
+            if not input("play again?(y/n): ").lower()=="y":
+                break
 
     else:
         print("OOPS ENTERED WRONG CHOICE PLZ TRY AGAIN")
