@@ -1,14 +1,14 @@
-def Dec(func):
+# def Dec(func):
 
-    def wrapper(*args , **kwargs):
-        print('\n**** WELCOME TO OUR SPOOKY ADVENTURE GAME !! 🕯️👻 ****\n\n')
-        func(*args , **kwargs)
-    return wrapper
+#     def wrapper(*args , **kwargs):
+#         print()
+#         func(*args , **kwargs)
+#     return wrapper
 
-@Dec
+# @Dec
 
 def adventure_game():
-    print('\nYou are going to your home in a dark night and your car had some problem in a lonely road. 🚗🌑\nWhile you were analysing the situation another car came and stopped by to check on you. 🚙💨\nHe was an old man probabily in his 60s. 👴\nHe offered you a lift and you have TWO choices :\n\nACCEPT it or REJECT it ❗\n')
+    print('\n**** WELCOME TO OUR SPOOKY ADVENTURE GAME !! 🕯️👻 ****\n\n\nYou are going to your home in a dark night and your car had some problem in a lonely road. 🚗🌑\nWhile you were analysing the situation another car came and stopped by to check on you. 🚙💨\nHe was an old man probabily in his 60s. 👴\nHe offered you a lift and you have TWO choices :\n\nACCEPT it or REJECT it ❗\n')
 
     choice1 = input('Enter yes or no for the answer : ').lower()
 
