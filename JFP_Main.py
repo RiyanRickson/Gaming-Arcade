@@ -17,7 +17,7 @@ import Quiz
 
 
 def main_page():   
-    print("WELCOME!!", "1 --> ROCK-PAPER-SCISSORS", "2 --> DICE ROLL" ,"3 --> GUESS THE NUMBER??!!","4 --> Adventure_game" ,"5 --> Guess the cricketer","6 --> SLOT MACHINE","7 --> Quiz game","ENTER YOUR CHOICE: ",sep="\n" )
+    print("WELCOME!!", "1 --> ROCK-PAPER-SCISSORS", "2 --> DICE ROLL" ,"3 --> GUESS THE NUMBER??!!","4 --> Adventure_game" ,"5 --> Guess the cricketer","6 --> SLOT MACHINE","7 --> Python quiz game","ENTER YOUR CHOICE: ",sep="\n" )
     CHOOSE_THE_GAME_BUTTON=int(input())
 
     if CHOOSE_THE_GAME_BUTTON == 1:
