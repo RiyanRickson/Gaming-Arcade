@@ -1,5 +1,5 @@
-def quiz_game()
-{
+def quiz_game():
+
     quiz = {
         "Which data type is used to store whole numbers?  :": "int",
         "Which data type stores decimal values?  :": "float",
@@ -31,9 +31,9 @@ def quiz_game()
     
     }
     
-    score = 0
+    score= 0
     print("Welcome to the Quiz Game Related to basic PYTHON\n")
-    
+        
     for question, answer in quiz.items():
         user_answer = input(question).strip().lower()
         if user_answer == answer:
@@ -41,6 +41,6 @@ def quiz_game()
             score += 1
         else:
             print(f"Wrong Answer! The Correct Answer is {answer}\n")
-    
+        
     print(f"Quiz Finished Related to basic PYTHON !! Your total score: {score}/{len(quiz)}")
-}
+
