@@ -12,6 +12,7 @@ import numguess
 import Adventure_game
 import Cric_guesser
 import Quiz
+import slot_machine
 
 
 
@@ -53,6 +54,9 @@ def main_page():
             Cric_guesser.cric_game()
             if not input("Play again?(y/n): ").lower()=="y":
                 break
+    elif CHOOSE_THE_GAME_BUTTON==6:
+        slot_machine.slotgame()
+            
     elif CHOOSE_THE_GAME_BUTTON==7:
         game_run=True
         while game_run:
