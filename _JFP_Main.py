@@ -45,7 +45,7 @@ def main_page():
     elif CHOOSE_THE_GAME_BUTTON==4:
         game_run=True
         while game_run:
-            Adventure_game.adventur_game()
+            Adventure_game.adventure_game()
             if not input("Play again?(y/n): ").lower()=="y":
                 break
     elif CHOOSE_THE_GAME_BUTTON==5:
